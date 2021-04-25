@@ -1,0 +1,9 @@
+<div *ngFor="let row of BattleState.getField()">
+  <button *ngFor="let state of row" (click)="BattleState.reveal(state)">
+
+    <span *ngIf="state.getCoordinationState() == ship">Ships</span>
+    <span *ngIf="state.getCoordinationState() == water">Water</span>
+    <span *ngIf="state.getCoordinationState() == hidden">Hidden</span>
+
+  </button>
+</div>
